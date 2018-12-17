@@ -1,0 +1,84 @@
+<!Doctype html>
+<html ng-app="andreAppBlog">
+  <head>
+    <title>Journal - Andresito de Guzman</title>
+    <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="theme-color" content="#263238">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="/resources/css/styles.css">
+   
+    <!-- Firebase App is always required and must be first -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-app.js"></script>
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-auth.js"></script>
+    <!--script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-database.js"></script-->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-firestore.js"></script>
+    <!--script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-messaging.js"></script-->
+    <!--script src="https://www.gstatic.com/firebasejs/5.7.0/firebase-functions.js"></script-->
+
+
+
+    <script>
+      // Initialize Firebase
+      var config = {
+	apiKey: "AIzaSyAYroruKZVazhbGP5_uENqqQ2tdPWFyRWs",
+	authDomain: "andre-is-great.firebaseapp.com",
+	databaseURL: "https://andre-is-great.firebaseio.com",
+	projectId: "andre-is-great",
+	storageBucket: "andre-is-great.appspot.com",
+	messagingSenderId: "811070702795"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+  <body class="blue-grey darken-4">
+   
+    <div class="navbar">
+    <nav class="blue-grey darken-4 z-depth-0">
+      <div class="left">
+	<a class="title" href="/?page=blog">Andresito + <b>Journal</b></a>
+	<a class="white-text sidenav-trigger" href="/?page=blog">
+	  <i class="material-icons">arrow_back</i>
+	</a>
+      </div> 
+    </nav>
+    </div>
+
+    <div id="blogActivity" class="activity" ng-controller="blogController" data-ng-init="init()">
+      <div class="container" style="margin-top:10%">
+	<h3 class="white-text">{{title}}</h3>
+	<br><br><br>
+	<div class="white-text">
+	  {{content}}
+	</div>
+	<br><br>
+	<div class="grey-text">
+	  <p id="infoAdaper">
+	    <span class="chip blue-grey darken-2">{{category}}</span>
+	    <span class="chip blue-grey darken-2">{{timestamp}}</span>
+	  </p>
+	  <p id="tagsAdapter">
+	    <span class="chip blue-grey darken-2" ng-repeat="tag in tags">{{tag}}</span>
+	  </p>
+	</div>
+      </div>
+    </div>
+
+    <br><br><br>
+  </body>
+</html>
+<script src="global_blog.js"></script>
+<script src="controller/Journal/blog.controller.js"></script>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
