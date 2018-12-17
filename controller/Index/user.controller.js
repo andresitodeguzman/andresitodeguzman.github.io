@@ -46,7 +46,6 @@ app.controller('userController',$scope=>{
       $scope.signInStatus = "Sign Out";
       $scope.$apply();
   }).catch(e=>{
-    alert(e);
     M.toast({html:"That didn't went through.",durationLength:2000});
   });
 
