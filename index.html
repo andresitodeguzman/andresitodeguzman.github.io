@@ -70,6 +70,7 @@
       <li>
 	<a class="white-text" onclick="showActivity('aboutMe')">About Me</a>
       </li>
+      <li><a class="white-text" onclick="showActivity('portfolio')">Portfolio</a></li>
       <li><a class="white-text" onclick="showActivity('blog')">Journal</a></li>
       <li><a class="white-text"  onclick="showActivity('say')">Say</a></li>
       <li class="divider"></li>
@@ -98,6 +99,49 @@
 	  <br>
 	  If you need to contact me, you may reach me through my e-mail at <a href="mailto:andresitomyemail@gmail.com" class="white-text">andresitomyemail@gmail.com</a>.
 	</p>
+      </div>
+    </div>
+
+    <div id="portfolioActivity" class="activity" ng-controller="portfolioController" data-ng-init="init()">
+      <div class="container">
+	<h1 class="white-text">Portfolio</h1>
+	<p class="grey-text">Here are some of my projects</p>
+	<br>
+	<div class="projectAdapter" ng-repeat="project in projects">
+
+	  <!-- w/ prevewImg -->
+	  <div ng-if="project.previewImg" class="card blue-grey darken-2">
+	    <div class="card-img">
+	      <img ng-src="{{project.previewImg}}" width="100%">
+	    </div>
+	    <div class="card-content">
+	      <h5 class="white-text"><b>{{project.title}}</b></h5>
+	      <p class="white-text">{{project.description}}</p>
+	      <br>
+	      <p class="grey-text"><font size="-1">{{project.category}}</font></p>
+	    </div>
+	    <div class="card-action" ng-if="project.action">
+	      <a class="white-text" ng-href="{{project.action[1]}}">{{project.action[0]}}</a>
+	    </div>
+	  </div>
+	  <!-- .w/ previewImg -->
+
+	  <!-- w/o previewImg -->
+	  <div class="card blue-grey darken-2" ng-if="!project.previewImg">
+	    <div class="card-content">
+	      <h5 class="white-text"><b>{{project.title}}</b></h5>
+	      <p class="white-text">{{project.description}}</p>
+	      <br>
+	      <p class="grey-text"><font size="-1">{{project.category}}</font></p>
+	    </div>
+	    <div class="card-action" ng-if="project.action">
+	      <a class="white-text" ng-href="{{project.action[1]}}">{{project.action[0]}}</a>
+	    </div>
+	  </div>
+	  <!-- .w/o previewImg -->
+
+	</div>
+
       </div>
     </div>
 
@@ -170,6 +214,7 @@
 <script type="text/javascript" src="global.js"></script>
 <script type="text/javascript" src="controller/Index/user.controller.js"></script>
 <script type="text/javascript" src="controller/Index/spotlight.controller.js"></script>
+<script type="text/javascript" src="controller/Index/portfolio.controller.js"></script>
 <script type="text/javascript" src="controller/Index/blog.controller.js"></script>
 <script type="text/javascript" src="controller/Index/say.controller.js"></script>
 <!--Import Google Icon Font-->

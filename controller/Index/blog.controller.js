@@ -29,6 +29,7 @@ app.controller('blogController',$scope=>{
 	  $scope.posts.push(postData);
 	});
 
+	$scope.posts.reverse();
 	$scope.$apply();
       })
       .catch(error=>{console.log(error);});
