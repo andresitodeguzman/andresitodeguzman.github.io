@@ -25,7 +25,7 @@
     div.projectsContainer > div.card > div.content > p {
         font-family: 'Abel', sans-serif;
         font-size: 1.2rem;
-        text-align: justify;
+        text-align: left;
         margin-bottom: 40px;
     }
     
@@ -39,17 +39,18 @@
         padding-top: 8px;
         padding-bottom: 8px;
         text-decoration:none;
+        outline:none;
     }
     
     div.projectsContainer > div.card > div.content > a:hover {
         background-color: #e5e3e3;
+        outline:none;
     }
     
     @media only screen and (min-width: 700px){
         div.projectsContainer > div.card > div.content {
             display:inline-block;
             width:30%;
-            height: 100%;
             vertical-align:middle;
         }
         div.projectsContainer > div.card > div.picture {
@@ -63,9 +64,10 @@
 <menubar></menubar>
 
 <div class="container">
-	<p class="title">
-        Here are some of my works
+	<p class="title" style="font-size:1.5rem !important;">
+        Here are some of my finished projects
     </p>
+    <br>
     <br>
     <div class="projectsContainer">
         <p>

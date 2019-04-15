@@ -3,6 +3,10 @@
     <head>
         <title>Andresito de Guzman</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="Andresito de Guzman">
+        <meta property="og:image" content="https://andresitodeguzman.github.io/images/me-small.png">
+        <meta property="og:description" content="Hi! I'm Andresito de Guzman and welcome to my website.">
+        <meta property="twitter:card" content="summary_large_image">
         
         <script>
             window.data = {};
@@ -10,28 +14,28 @@
             window.data.projects = [];
             window.data.menu = [
                 {
-                    id:1,
                     title:"About Me",
                     url:"#!/",
-                    isActive:false
                 },
                 {
-                    id:2,
                     title:"Portfolio",
                     url:"#!/portfolio",
-                    isActive:false
                 },
                 {
-                    id:3,
+                    title:"Journal",
+                    url:"#!/journal"
+                },
+                {
+                    title:"Featured",
+                    url:"#!/featured"
+                },
+                {
+                  	title:"Motion",
+                    url:"#!/motion"
+                },
+                {
                     title:"Medium",
                     url:"https://medium.com/@andresitodeguzman",
-                    isActive:false
-                },
-                {
-                    id:4,
-                    title:"LinkedIn",
-                    url:"https://www.linkedin.com/in/andresito-de-guzman-0ba46996/",
-                    isActive:false
                 }
             ];
             
@@ -42,27 +46,29 @@
 
 		<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-firestore.js"></script>
+                
         
         <script src="./js/firebase.js"></script>
         
-        <script type="text/javascript" src="./assets/js/angular.min.js"></script>
-        <script type="text/javascript" src="./assets/js/angular-animate.js"></script>
-        <script type="text/javascript" src="./assets/js/angular-route.js"></script>
-        <script type="text/javascript" src="./assets/js/angular-sanitize.js"></script>
-        <script type="text/javascript" src="./assets/js/jquery-3.3.1.min.js"></script>
+        <script src="./assets/js/angular.min.js"></script>
+        <script src="./assets/js/angular-route.js"></script>
+        <script src="./assets/js/jquery-3.3.1.min.js"></script>
 
         <script src="./app/app.module.js"></script>
         <script src="./app/app.config.js"></script>
 
         <script src="./app/shared/menubar/menubar.component.js"></script>
         <script src="./app/shared/fixedbar/fixedbar.component.js"></script>
-        <script src="./app/shared/footerbar/footerbar.component.js"></script>
-        
-        
-        
+        <script src="./app/shared/footerbar/footerbar.component.js"></script>        
+               
         <script src="./app/activity/home/home.component.js"></script>
         <script src="./app/activity/portfolio/portfolio.component.js"></script>
+        <script src="./app/activity/journal/journal.component.js"></script>
+        <script src="./app/activity/read/read.component.js"></script>
+        <script src="./app/activity/featured/featured.component.js"></script>
+        <script src="./app/activity/motion/motion.component.js"></script>
         <script src="./app/activity/notfound/notfound.component.js"></script>
+        
         
     </head>
     <body ng-view></body>

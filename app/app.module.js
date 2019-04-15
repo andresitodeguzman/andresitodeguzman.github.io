@@ -5,5 +5,9 @@ angular.module('andresitoApp',[
   'home',
   'footerbar',
   'notfound',
-  'portfolio'
+  'portfolio',
+  'journal',
+  'read',
+  'featured',
+  'motion'
 ]);

@@ -48,14 +48,12 @@
         color: var(--color-nav-link-selected);
         text-emphasis:bold;
         text-decoration:underline;
-    }
-    
-    li.navbar-menu-entry > a:active {
         outline:none;
     }
     
-    li.navbar-menu-entry > a:hover {
+    li.navbar-menu-entry > a:hover,a:focus, a:active {
         text-decoration: underline;
+        outline:none !important;
     }
 
     li.navbar-menu-entry > .spacer {
