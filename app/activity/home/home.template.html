@@ -55,6 +55,18 @@
       font-size: 1.5rem;
     }
 
+    @media only screen and (max-width:700px){
+      div.jumbotron > p {
+	width:100%;
+	font-family:'Abril Fatface', serif;
+	text-align:left;
+	font-size:4rem;
+	color: #547D8F;
+	padding-top:50%;
+	margin-top:0;
+      }
+    }
+
     @media only screen and (min-width:700px){
       div.container > div.subcontent {
 	display:inline-block;
@@ -72,6 +84,15 @@
 	margin-top:0;
 	width:50%;
       }
+
+      div.jumbotron > p{
+	width:100%;
+	font-family: 'Abril Fatface', serif;
+	text-align:center;
+	font-size:7rem;
+	color:#547D8F;
+	margin:0;
+      }
     }
 
 </style>
@@ -79,6 +100,7 @@
 <menubar></menubar>
 
 <div class="jumbotron">
+  <p id="faceTypewriter">Sample</p>
 </div>
 
 <div class="container">            
