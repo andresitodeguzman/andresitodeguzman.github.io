@@ -1,0 +1,77 @@
+<!Doctype html>
+<html ng-app="andresitoApp" lang="en">
+    <head>
+        <title>Andresito de Guzman</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="Andresito de Guzman">
+        <meta property="og:image" content="https://andresitodeguzman.github.io/images/me-small.png">
+        <meta property="og:description" content="Hi! I'm Andresito de Guzman and welcome to my website.">
+        <meta property="twitter:card" content="summary_large_image">
+        
+        <script>
+            window.data = {};
+            window.data.currentPage = null;
+            window.data.projects = [];
+            window.data.menu = [
+                {
+                    title:"About Me",
+                    url:"#!/",
+                },
+                {
+                    title:"Portfolio",
+                    url:"#!/portfolio",
+                },
+                {
+                    title:"Journal",
+                    url:"#!/journal"
+                },
+                {
+                    title:"Featured",
+                    url:"#!/featured"
+                },
+                {
+                  	title:"Motion",
+                    url:"#!/motion"
+                },
+                {
+                    title:"Medium",
+                    url:"https://medium.com/@andresitodeguzman",
+                }
+            ];
+            
+        </script>
+        
+        <link rel="stylesheet" href="./assets/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Abril+Fatface|Abel|Permanent+Marker" rel="stylesheet">
+
+	<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-firestore.js"></script>
+                
+        
+        <script src="./js/firebase.js"></script>
+        
+        <script src="./assets/js/angular.min.js"></script>
+        <script src="./assets/js/angular-route.js"></script>
+        <script src="./assets/js/jquery-3.3.1.min.js"></script>
+
+	<script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
+
+        <script src="./app/app.module.js"></script>
+        <script src="./app/app.config.js"></script>
+
+        <script src="./app/shared/menubar/menubar.component.js"></script>
+        <script src="./app/shared/fixedbar/fixedbar.component.js"></script>
+        <script src="./app/shared/footerbar/footerbar.component.js"></script>        
+               
+        <script src="./app/activity/home/home.component.js"></script>
+        <script src="./app/activity/portfolio/portfolio.component.js"></script>
+        <script src="./app/activity/journal/journal.component.js"></script>
+        <script src="./app/activity/read/read.component.js"></script>
+        <script src="./app/activity/featured/featured.component.js"></script>
+        <script src="./app/activity/motion/motion.component.js"></script>
+        <script src="./app/activity/notfound/notfound.component.js"></script>
+        
+        
+    </head>
+    <body ng-view></body>
+</html>
