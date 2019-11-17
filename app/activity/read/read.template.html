@@ -1,0 +1,36 @@
+<style>
+    div.container > p.title {
+        font-size: 2rem !important;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        text-emphasis:bold;
+        margin-bottom: 80px;
+    }
+        
+    div.container > p.subcontent {
+        font-size: 1.2rem;
+        text-align:left;
+    }
+    div.container > p.subcontent > span {
+        font-family: 'Abel', sans-serif;
+        color: var(--color-nav-link-selected);        
+    }
+    
+</style>
+<menubar></menubar>
+
+<div class="container">
+    <p class="title" id="title">
+        The title would be here
+    </p>
+    <p style="margin-bottom: 80px;" id="content">
+        Hold on. I'm just getting the post from the server. This may take a while, meanwhile, please admire the simplicity of the site.  
+    </p>
+    <p class="subcontent">
+        Category: <span id="category">Uncategorized</span>
+    </p>
+    <p class="subcontent">
+        Tags: <span id="tags"></span>
+    </p>
+</div>
+
+<footerbar></footerbar>
